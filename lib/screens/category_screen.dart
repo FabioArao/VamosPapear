@@ -1,22 +1,21 @@
 // screens/category_screen.dart
 
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:myapp/models/category.dart';
-import 'package:myapp/providers/card_provider.dart';
 import 'package:myapp/screens/card_screen.dart';
 import 'package:myapp/widgets/catrgory_card.dart';
 import 'package:myapp/utils/constants.dart';
 
 class CategoryScreen extends StatelessWidget {
+  const CategoryScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Vamos Papear'),
+        title: const Text('Vamos Papear'),
         actions: [
           IconButton(
-            icon: Icon(Icons.person),
+            icon: const Icon(Icons.person),
             onPressed: () {
               // Navigate to profile screen (not implemented yet)
             },
@@ -24,8 +23,8 @@ class CategoryScreen extends StatelessWidget {
         ],
       ),
       body: GridView.builder(
-        padding: EdgeInsets.all(16),
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        padding: const EdgeInsets.all(16),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           childAspectRatio: 3 / 2,
           crossAxisSpacing: 16,

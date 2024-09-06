@@ -6,6 +6,8 @@ import 'package:myapp/providers/card_provider.dart';
 import 'package:myapp/screens/category_screen.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -23,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Vamos Papear'),
+        title: const Text('Vamos Papear'),
       ),
       body: Center(
         child: Column(
@@ -34,15 +36,15 @@ class _HomeScreenState extends State<HomeScreen> {
               style: Theme.of(context).textTheme.headlineSmall,
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => CategoryScreen()),
+                  MaterialPageRoute(builder: (context) => const CategoryScreen()),
                 );
               },
-              child: Text('Começar'),
+              child: const Text('Começar'),
             ),
           ],
         ),

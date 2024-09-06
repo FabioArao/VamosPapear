@@ -7,8 +7,7 @@ class CategoryCard extends StatelessWidget {
   final Category category;
   final VoidCallback onTap;
 
-  const CategoryCard({Key? key, required this.category, required this.onTap})
-      : super(key: key);
+  const CategoryCard({super.key, required this.category, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +21,8 @@ class CategoryCard extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.category, size: 48), // Placeholder icon
-              SizedBox(height: 8),
+              const Icon(Icons.category, size: 48), // Placeholder icon
+              const SizedBox(height: 8),
               Text(
                 category.name,
                 style: Theme.of(context).textTheme.titleLarge,

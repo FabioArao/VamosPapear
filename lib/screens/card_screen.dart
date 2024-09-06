@@ -9,7 +9,7 @@ import 'package:myapp/widgets/vamos_papear_card.dart';
 class CardScreen extends StatelessWidget {
   final Category category;
 
-  CardScreen({required this.category});
+  const CardScreen({super.key, required this.category});
 
   @override
   Widget build(BuildContext context) {
@@ -39,8 +39,8 @@ class CardScreen extends StatelessWidget {
         onPressed: () {
           cardProvider.setSelectedCategory(category.name);
         },
-        child: Icon(Icons.refresh),
         tooltip: 'Next Card',
+        child: const Icon(Icons.refresh),
       ),
     );
   }

@@ -6,6 +6,8 @@ import 'package:myapp/models/card.dart';
 import 'package:myapp/providers/card_provider.dart';
 
 class AdminScreen extends StatefulWidget {
+  const AdminScreen({super.key});
+
   @override
   _AdminScreenState createState() => _AdminScreenState();
 }

@@ -67,7 +67,7 @@ final List<Category> initialCategories = [
 final ThemeData appTheme = ThemeData(
   primarySwatch: Colors.blue,
   visualDensity: VisualDensity.adaptivePlatformDensity,
-  textTheme: TextTheme(
+  textTheme: const TextTheme(
     headlineSmall: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
     bodyLarge: TextStyle(fontSize: 16),
   ),

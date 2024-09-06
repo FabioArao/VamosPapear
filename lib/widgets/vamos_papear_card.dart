@@ -7,8 +7,7 @@ class VamosPapearCard extends StatefulWidget {
   final List<String> categories;
 
   const VamosPapearCard(
-      {Key? key, required this.question, required this.categories})
-      : super(key: key);
+      {super.key, required this.question, required this.categories});
 
   @override
   _VamosPapearCardState createState() => _VamosPapearCardState();
@@ -42,7 +41,7 @@ class _VamosPapearCardState extends State<VamosPapearCard> {
 
   Widget _buildFrontCard() {
     return Card(
-      key: ValueKey<bool>(true),
+      key: const ValueKey<bool>(true),
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: Container(
@@ -56,7 +55,7 @@ class _VamosPapearCardState extends State<VamosPapearCard> {
             colors: [Colors.blue.shade300, Colors.blue.shade700],
           ),
         ),
-        child: Center(
+        child: const Center(
           child: Text(
             'Vamos Papear',
             style: TextStyle(
@@ -72,7 +71,7 @@ class _VamosPapearCardState extends State<VamosPapearCard> {
 
   Widget _buildBackCard() {
     return Card(
-      key: ValueKey<bool>(false),
+      key: const ValueKey<bool>(false),
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: Container(
@@ -84,10 +83,10 @@ class _VamosPapearCardState extends State<VamosPapearCard> {
           children: [
             Text(
               widget.question,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Wrap(
               spacing: 8,
               runSpacing: 8,
